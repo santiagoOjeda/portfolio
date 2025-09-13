@@ -12,11 +12,21 @@ export function MenuButton(props: IMenuProps) {
 }
 
 export function Menu () {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleTouch = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <section id='menu' className='absolute flex flex-col items-center justify-center bg-black hover:bg-[#22FEEB]  hover:text-black   text-white p-4 rounded-full w-[200px] h-[200px] shadow-[0_0_15px_#22FEEB] hover:shadow-[0_0_50px_#22FEEB] hover:w-[400px] hover:h-[400px] transition-all duration-300 group'>
-      <p className='text-center text-2xl max-w-50 group-hover:opacity-0 transition-opacity duration-300'>How can 
+    <section 
+      id='menu' 
+      className={`absolute flex flex-col items-center justify-center bg-black hover:bg-[#22FEEB] hover:text-black text-white p-4 rounded-full w-[200px] h-[200px] shadow-[0_0_15px_#22FEEB] hover:shadow-[0_0_50px_#22FEEB] hover:w-[400px] hover:h-[400px] transition-all duration-300 group ${isOpen ? 'bg-[#22FEEB] text-black w-[400px] h-[400px] shadow-[0_0_50px_#22FEEB]' : ''}`}
+      onTouchStart={handleTouch}
+    >
+      <p className={`text-center text-2xl max-w-50 group-hover:opacity-0 transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}>How can 
       I help you?</p> 
-      <div className='absolute flex flex-col gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300' >
+      <div className={`absolute flex flex-col gap-4 group-hover:opacity-100 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} >
         <MenuButton value='Timeline' onClick={() => {}}/> 
         <MenuButton value='About' onClick={() => {}}/>
         <MenuButton value='Contact' onClick={() => {}}/>
