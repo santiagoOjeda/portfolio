@@ -26,16 +26,12 @@ export default function Home() {
     });
 }, []);
 
-const particlesLoaded = (container) => {
-  console.log(container);
-};
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-stone-900 to-cyan-900 relative">
+    <div className="min-h-screen relative">
       <div>
-      init && <Particles
+     <Particles
             id="tsparticles"
-            particlesLoaded={particlesLoaded}
             options={{
                 fpsLimit: 120,
                 interactivity: {
@@ -52,18 +48,20 @@ const particlesLoaded = (container) => {
                     },
                     modes: {
                         push: {
-                            quantity: 4,
+                            quantity: 400,
+                            speed: 2,
+                            distance: 10,
                         },
                         repulse: {
-                            distance: 200,
-                            duration: 0.4,
+                            distance: 4,
+                            duration: 1,
+                           // speed: .5,
                         },
                     },
                 },
                 particles: {
-                  
                     color: {
-                        value: "#1CCEBF",
+                        value: "#0f9f93",
                     },
                     move: {
                         direction: "top",
@@ -72,22 +70,27 @@ const particlesLoaded = (container) => {
                             default: "bounce",
                         },
                         random: true,
-                        speed: 1,
+                        speed: .5,
                         straight: false,
                     },
                     number: {
-                       
-                        value: 250,
+                        value: 1450,
                     },
                     opacity: {
-                        value: 0.33,
+                        value:1,
+                        animation: {
+                            enable: true,
+                            speed: 3,
+                            sync: true,
+                            mode: "random",
+                        },
                         
                     },
                     shape: {
                         type: "circle",
                     },
                     size: {
-                        value: { min: .1, max: 2 },
+                        value: { min: .01, max: 1 },
                     },
                 },
                 detectRetina: true,

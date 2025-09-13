@@ -2,7 +2,7 @@
 
 export default function Contact() {
   return (
-    <section id="contacto" className="min-h-screen flex items-center justify-center px-4 bg-gray-50 dark:bg-gray-800/50">
+    <section id="contacto" className="min-h-screen flex items-center justify-center px-4">
       <div className="container mx-auto max-w-4xl py-20">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Contacto</h2>
         <div className="flex flex-col md:flex-row gap-8 justify-center">

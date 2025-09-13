@@ -1,80 +1,106 @@
 'use client';
+import { VerticalTimeline, VerticalTimelineElement    }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 export default function Projects() {
   return (
     <section id="proyectos" className="min-h-screen flex items-center justify-center px-4">
+ 
       <div className="container mx-auto max-w-6xl py-20">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Timeline</h2>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8  ">
-          {/* Project Card */}
-          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div className="p-12">
-              <h2 className="text-3xl mb-2 font-extralight">Target</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Descripción del proyecto y tecnologías utilizadas.
-              </p>
-              <div className="flex gap-2">
-                <span className="px-3 py-1 bg-[#1CCEBF]  text-black rounded-full text-sm">
-                  React
-                </span>
-                <span className="px-3 py-1 bg-[#1CCEBF]  text-black rounded-full text-sm">
-                  Node.js
-                </span>
-              </div>
-            </div>
-            
-          </div>
-          <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div className="p-12">
-              <h3 className="text-xl font-bold mb-2">Lagash</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Descripción del proyecto y tecnologías utilizadas.
-              </p>
-              <div className="flex gap-2">
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  React
-                </span>
-                <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-sm">
-                  Node.js
-                </span>
-              </div>
-            </div>
-            
-          </div>
-          <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div className="p-12">
-              <h3 className="text-xl font-bold mb-2">Mercado Libre</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Descripción del proyecto y tecnologías utilizadas.
-              </p>
-              <div className="flex gap-2">
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  React
-                </span>
-                <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-sm">
-                  Node.js
-                </span>
-              </div>
-            </div>
-            
-          </div>
-          <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div className="p-12">
-              <h3 className="text-xl font-bold mb-2">Castine</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Descripción del proyecto y tecnologías utilizadas.
-              </p>
-              <div className="flex gap-2">
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">
-                  React
-                </span>
-                <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-sm">
-                  Node.js
-                </span>
-              </div>
-            </div>
-            
-          </div>
+          <VerticalTimeline>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                date="2011 - present"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<>p</>}
+              >
+                <h3 className="vertical-timeline-element-title">Creative Director</h3>
+                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+                <p>
+                  Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2010 - 2011"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<>p</>}
+              >
+                <h3 className="vertical-timeline-element-title">Art Director</h3>
+                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                <p>
+                  Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2008 - 2010"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<>p</>}
+              >
+                <h3 className="vertical-timeline-element-title">Web Designer</h3>
+                <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+                <p>
+                  User Experience, Visual Design
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2006 - 2008"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<>p</>}
+              >
+                <h3 className="vertical-timeline-element-title">Web Designer</h3>
+                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                <p>
+                  User Experience, Visual Design
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                date="April 2013"
+                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                icon={<>p</>}
+              >
+                <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
+                <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+                <p>
+                  Strategy, Social Media
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                date="November 2012"
+                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                icon={<>p</>}
+              >
+                <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
+                <h4 className="vertical-timeline-element-subtitle">Certification</h4>
+                <p>
+                  Creative Direction, User Experience, Visual Design
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                date="2002 - 2006"
+                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                icon={<>p</>}
+              >
+                <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
+                <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
+                <p>
+                  Creative Direction, Visual Design
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+                icon={<>p</>}
+              />
+          </VerticalTimeline>
         </div>
       </div>
     </section>
