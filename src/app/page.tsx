@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="min-h-screen relative">
       <div>
-     <Particles
+     {init && <Particles
             id="tsparticles"
             options={{
                 fpsLimit: 120,
@@ -44,7 +44,9 @@ export default function Home() {
                             enable: true,
                             mode: "repulse",
                         },
-                        resize: true,
+                        resize: {
+                            enable: true,
+                        },
                     },
                     modes: {
                         push: {
@@ -96,7 +98,7 @@ export default function Home() {
                 detectRetina: true,
             }} 
          
-        />
+        />}
       </div>
       <div className="relative z-10">
         <Header />
