@@ -3,11 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/porfolio',
+  assetPrefix: '/porfolio/',
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/porfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/porfolio' : '',
 };
 
 export default nextConfig;
