@@ -7,7 +7,7 @@ export interface IMenuProps {
 
 export function MenuButton(props: IMenuProps) {
   return (
-    <button className=' cursor-pointer hover:scale-160 hover:font-bold transition-transform duration-300' onClick={() => props.onClick(props.value)}>{props.value}</button>
+    <button className=' cursor-pointer hover:scale-160 hover:font-bold transition-transform duration-300 text-2xl'  onClick={() => props.onClick(props.value)}>{props.value}</button>
   )
 }
 
@@ -16,6 +16,17 @@ export function Menu () {
 
   const handleTouch = () => {
     setIsOpen(!isOpen);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    setIsOpen(false); // Cerrar el menú después de navegar
   };
 
   return (
@@ -27,9 +38,9 @@ export function Menu () {
       <p className={`text-center text-2xl max-w-50 group-hover:opacity-0 transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}>How can 
       I help you?</p> 
       <div className={`absolute flex flex-col gap-4 group-hover:opacity-100 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} >
-        <MenuButton value='Timeline' onClick={() => {}}/> 
-        <MenuButton value='About' onClick={() => {}}/>
-        <MenuButton value='Contact' onClick={() => {}}/>
+        <MenuButton value='My Timeline' onClick={() => scrollToSection('proyectos')}/> 
+        <MenuButton value='About' onClick={() => scrollToSection('sobre-mi')}/>
+        <MenuButton value='Contact' onClick={() => scrollToSection('contacto')}/>
       </div>
     </section>
   );

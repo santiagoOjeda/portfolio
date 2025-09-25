@@ -34,10 +34,10 @@ export default function Header() {
       <div className="container  mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-xl font-bold"><p>Santiago Ojeda <span className="text-[#1CCEBF]">Portfolio</span></p> </div>
         <nav className="hidden md:flex gap-6">
-          <a href="#inicio" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Inicio</a>
-          <a href="#proyectos" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Proyectos</a>
-          <a href="#sobre-mi" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Sobre Mí</a>
-          <a href="#contacto" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Contacto</a>
+          <a href="#inicio" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Start</a>
+          <a href="#proyectos" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">My Timeline</a>
+          <a href="#sobre-mi" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">About</a>
+          <a href="#contacto" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">Contact</a>
         </nav>
       </div>
     </header>
